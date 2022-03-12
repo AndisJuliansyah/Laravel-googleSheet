@@ -15,12 +15,6 @@
     <body class="bg-light">
         <div class="container bg-light rounded mt-2">
             <div class="row p-2 pt-4">
-                {{-- <div class="col-6">
-                    <a href="/"><img src="/images/kasual.png" style="width:170px" /></a>
-                </div>
-                <div class="col-6">
-                  <h1 class="lead float-right">Coding Challenge :<br />Zulkhaery (Tech Lead)</h1>
-                </div> --}}
             </div>
             <div class="row p-2 pt-5">
             @if (session('status'))
