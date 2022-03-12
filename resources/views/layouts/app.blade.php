@@ -35,24 +35,37 @@
             @endif
                 <div class="col-12">
                     <div class="row">
-                      <div class="col-4">
+                      <div class="col-6">
                           <form action="/search">
-                          <input class="form-control col-9 d-inline" name="keyword" placeholder="Cari (no, first name, ...etc)" value="{{ $_GET['keyword'] ?? '' }}" />
-                          <button type="submit" class="btn btn-success col-3 float-right d-inline">GO</button>
+                            <div class="row">
+                                <div class="col-sm-9">
+                                  <h4>Filter</h4>
+                                  <div class="row">
+                                    <div class="col-8 col-sm-8">
+                                        <input class="form-control d-inline" name="keyword" placeholder="Input ..." value="{{ $_GET['keyword'] ?? '' }}" />
+                                    </div>
+                                    <div class="col-6 col-sm-2">
+                                        <button type="submit" class="btn btn-primary float-right d-inline">Cari</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                           </form>
                         </div>
-                        <div class="col-2">
-                          @if(last(request()->segments()) == 'search')
-                          <a href="{{ route('dashboard') }}" class="d-inline-block text-danger mt-2"><i class="bi bi-arrow-left"></i> Kembali</a>
-                          @endif
-                        </div>
+                        
                         <div class="col-6">
-                            <button type="button" class="btn btn-danger float-right" data-toggle="modal" data-target="#insertModal"><i class="bi bi-plus-lg"></i> Tambah Data</button>
+                            <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#insertModal"><i class="bi bi-plus-lg"></i> Tambah Data</button>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-md-12 d-flex justify-content-end">
+                @if(last(request()->segments()) == 'search')
+                <a href="{{ route('dashboard') }}" class="d-inline-block text-dark mt-2"><i class="bi bi-arrow-left"></i> Kembali</a>
+                @endif
+            </div>
             <div class="row p-4">
+                
             @yield('content')
             </div>
         </div>
