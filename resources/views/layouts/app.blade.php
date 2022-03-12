@@ -36,7 +36,7 @@
                 <div class="col-12">
                     <div class="row">
                       <div class="col-4">
-                          <form action="{{ route('search') }}">
+                          <form action="/search">
                           <input class="form-control col-9 d-inline" name="keyword" placeholder="Cari (no, first name, ...etc)" value="{{ $_GET['keyword'] ?? '' }}" />
                           <button type="submit" class="btn btn-success col-3 float-right d-inline">GO</button>
                           </form>
