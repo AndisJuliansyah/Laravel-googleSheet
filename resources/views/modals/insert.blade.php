@@ -3,7 +3,7 @@
 <div class="modal fade" id="insertModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="insertModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content p-3">
-	<form method="post" action="{{ route('insert') }}">
+	<form method="post" action="/insert">
 		@csrf
         <input type="hidden" id="rangeStart" name="range_start" required />
         <input type="hidden" id="rangeEnd" name="range_end" required />

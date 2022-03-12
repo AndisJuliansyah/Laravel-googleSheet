@@ -3,7 +3,7 @@
 <div class="modal fade" id="editModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content p-3">
-	<form method="post" action="{{ route('edit') }}">
+	<form method="post" action="/edit">
 		@csrf
         <input type="hidden" id="rangeStart" name="range_start" required />
         <input type="hidden" id="rangeEnd" name="range_end" required />

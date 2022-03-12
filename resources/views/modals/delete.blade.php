@@ -3,7 +3,7 @@
 <div class="modal fade" id="deleteModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content p-3">
-	<form method="post" action="{{ route('delete') }}">
+	<form method="post" action="/delete">
 		@csrf
         <input type="hidden" id="delrowIndex" name="row_index" required />
         <div class="modal-header p-0">
